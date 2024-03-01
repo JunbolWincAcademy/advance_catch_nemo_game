@@ -21,8 +21,8 @@ export const CatchNemo = () => {
   const [bubbles, setBubbles] = useState([]);
 
   useEffect(() => {
-    //this hook use two parameters.The first one is is an anonymous arrow function
-    //and the second one is speed which is state.
+    //The useEffect always get two parameters: a setupFunction and dependencies. In this case it gets an anonymous arrow function
+    //as a setupFunction and the second one is speed which is state as a dependency.
     if (!gameActive) {
       return; // Exit early if the game isn't active
     }
@@ -100,7 +100,7 @@ export const CatchNemo = () => {
             setDirection(1); // Reset direction
             setMessage(''); // Clear message
             setGamePaused(false); // Unpause the game
-          }, 3000); // 3-second pause before game reset
+          }, 2000); // 3-second pause before game reset
           return newCount;
         }
         // Double the fish's speed by halving the interval time for the first two catches
