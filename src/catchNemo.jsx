@@ -21,6 +21,7 @@ export const CatchNemo = () => {
   const [bubbles, setBubbles] = useState([]);
 
   useEffect(() => {
+    //this hook use two parameters.The first one is is an anonymous arrow function and the second one is speed which is state.
     if (!gameActive) {
       return; // Exit early if the game isn't active
     }
@@ -67,11 +68,10 @@ export const CatchNemo = () => {
       clearInterval(bubbleUpdateInterval); // Ensure to clear this interval as well
     };
   }, [fishPosition, direction, gamePaused, speed, gameActive]); // ❓ Include all dependencies, I need to understand why this array is needed
-      //🔔 is needed because useEffect needs two parameters: useEffect(logic,dependencies)
+  //🔔 is needed because useEffect needs two parameters: useEffect(logic,dependencies)
 
-
-   // Function to start the game
-   const startGame = () => {
+  // Function to start the game
+  const startGame = () => {
     setGameActive(true); // ✅ Trigger game start
   };
 
