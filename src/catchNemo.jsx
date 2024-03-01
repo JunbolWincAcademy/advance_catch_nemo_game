@@ -21,7 +21,8 @@ export const CatchNemo = () => {
   const [bubbles, setBubbles] = useState([]);
 
   useEffect(() => {
-    //this hook use two parameters.The first one is is an anonymous arrow function and the second one is speed which is state.
+    //this hook use two parameters.The first one is is an anonymous arrow function
+    //and the second one is speed which is state.
     if (!gameActive) {
       return; // Exit early if the game isn't active
     }
